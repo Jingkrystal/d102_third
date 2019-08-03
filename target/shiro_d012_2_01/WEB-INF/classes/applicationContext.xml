@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+<!--    组件扫描  -->
+    <context:component-scan base-package="org.java"/>
+<!--视图映射器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+<mvc:annotation-driven/>
+<mvc:default-servlet-handler/>
+<!--引用jdbc文件-->
+<context:property-placeholder location="classpath:jdbc.properties"/>
+
+ <!--配置数据源 -->
+ <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+     <property name="jdbcUrl" value="${url}"/>
+     <property name="driverClass" value="${driver}"/>
+     <property name="user" value="${user}"/>
+     <property name="password" value="${pwd}"/>
+ </bean>
+
+<!-- 配置sqlSessionFactory-->
+<bean id="SqlSe sseionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <property name="dataSource" ref="dataSource"/>
+    <property name="mapperLocations" value="classpath:mapper/*Mapper.xml"/>
+    <property name="typeAliasesPackage" value="java.util"/>
+</bean>
+<!--扫描所有的mapper文件-->
+<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+    <property name="basePackage" value="org.java.dao"/>
+</bean>
+</beans>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+    <file type="web" url="file://$PROJECT_DIR$/../springboot_d102_shiro" />
+    <file type="web" url="file://$PROJECT_DIR$/../springboot_d102_shiro_1" />
+    <file type="web" url="file://$PROJECT_DIR$/../../springboot_websocket_d102_1_01" />
+    <file type="web" url="file://$PROJECT_DIR$/../../websocket" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../springboot_d102_shiro/pom.xml" />
+        <option value="$PROJECT_DIR$/../springboot_d102_shiro_1/pom.xml" />
+        <option value="$PROJECT_DIR$/../../websocket/pom.xml" />
+        <option value="$PROJECT_DIR$/../../springboot_websocket_d102_1_01/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectResources">
+    <resource url="http://mybatis.org/dtd/mybatis-3-config.dtd" location="D:/jar/mybatis.jar/mybatis-3-config.dtd" />
+    <resource url="http://mybatis.org/dtd/mybatis-3-mapper.dtd" location="D:/jar/mybatis.jar/mybatis-3-mapper.dtd" />
+    <resource url="http://www.springframework.org/schema/aop" location="D:/jar/spring.schema/spring-aop-4.2.xsd" />
+    <resource url="http://www.springframework.org/schema/beans" location="D:/jar/spring.schema/spring-beans-4.2.xsd" />
+    <resource url="http://www.springframework.org/schema/context" location="D:/jar/spring.schema/spring-context-4.2.xsd" />
+    <resource url="http://www.springframework.org/schema/mvc" location="D:/jar/spring.schema/spring-mvc-4.2.xsd" />
+    <resource url="http://www.springframework.org/schema/tx" location="D:/jar/spring.schema/spring-tx-4.2.xsd" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
